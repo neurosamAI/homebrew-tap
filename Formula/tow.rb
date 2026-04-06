@@ -7,19 +7,19 @@ class Tow < Formula
   desc "Lightweight, agentless deployment orchestrator for bare-metal servers and VMs"
   homepage "https://tow-cli.neurosam.ai"
   license "MIT"
-  version "0.3.1"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/neurosamAI/tow-cli/releases/download/v#{version}/tow-darwin-arm64"
-      sha256 "bb03d09c09d63bd5c81d766d438f753ab8dd3a8a78823053339559ab0682df2b"
+      sha256 "245a54c11771dcd9f4153c0b0695951acc471a2028469780a511e1b7663a26dd"
 
       def install
         bin.install "tow-darwin-arm64" => "tow"
       end
     else
       url "https://github.com/neurosamAI/tow-cli/releases/download/v#{version}/tow-darwin-amd64"
-      sha256 "17ee4cd57adc6cd27c52f22b4ff67a3696ae74c142ba65699f7b1742151d36ab"
+      sha256 "8b2b726846c1cfccdadf2b4d102186bacb4c13813b5e0d6893bb8b4df673a884"
 
       def install
         bin.install "tow-darwin-amd64" => "tow"
@@ -30,14 +30,14 @@ class Tow < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/neurosamAI/tow-cli/releases/download/v#{version}/tow-linux-arm64"
-      sha256 "8747b30155bd32bdb0071b3c8335925fe2328f9d5422800e2103ffc85d202690"
+      sha256 "d8af2c1e93e512ddb3130fea084330001282b17c194f70f0b28c3343df68139a"
 
       def install
         bin.install "tow-linux-arm64" => "tow"
       end
     else
       url "https://github.com/neurosamAI/tow-cli/releases/download/v#{version}/tow-linux-amd64"
-      sha256 "242b660d0538a3f241fbec61134e4642082e559679082b3a40f95e394adb5a39"
+      sha256 "125908369e0306bd35be4e446fc3bde2f345181a4fb57371c1b5d5649d14bc8e"
 
       def install
         bin.install "tow-linux-amd64" => "tow"
